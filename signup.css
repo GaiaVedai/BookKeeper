@@ -1,0 +1,11 @@
+label {
+    float: left;
+    width: 150px;
+}
+
+select {
+    /* size: options.length; */
+}
+.tooShort {
+    display: none;
+}
