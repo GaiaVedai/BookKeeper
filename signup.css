@@ -8,4 +8,6 @@ select {
 }
 .tooShort {
     display: none;
+    color: red;
+    text-indent: 3px;
 }

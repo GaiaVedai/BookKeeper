@@ -11,11 +11,11 @@
 </head>
 
 <body>
-        <form class="form">
+    <form class="form">
         <label>Username:</label>
-        <input type="text" id="Username" pattern=".{5,}" class="input" placeholder="Username" required/>
+        <input type="text" id="username" pattern=".{5,}" class="input" placeholder="Username" required/>
         <br>
-        <div class="tooShort">Please enter 5 characters or more</div>
+        <div class="tooShort">* Please enter 5 characters or more</div>
         <label> E-mail</label>
         <input type="email" class="input" placeholder="name@site.com" required />
         <br>
@@ -286,19 +286,19 @@
         <input type="button" onclick="submitForm()" value="submit" />
     </form>
     <script>
-        let submit = 
-
         function submitForm() {
-            if (validateUsername === false) {
-                document.getElementsByClassName(tooShort).style = "block";
+            if (validateUsername() === false) {
+                document.getElementsByClassName("tooShort")[0].style.display = "block";
+            //   alert(  document.getElementById("username").value);
             }
-            document.getElementsById(Username);
+
         }
         function validateUsername() {
-            if (document.getElementsByClassName('tooshort').length < 6 || document.getElementsByClassName.innerHtml === null) {
-                return = false;
-            };
-        }
+            if (document.getElementById("username").value.length < 6) {
+                return false;
+            }
+            return true;
+        };
     </script>
 </body>
 
